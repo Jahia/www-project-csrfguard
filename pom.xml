@@ -97,14 +97,6 @@
     </issueManagement>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id> <!-- Must match the serverId from the settings.xml -->
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id> <!-- Must match the serverId from the settings.xml -->
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
         <repository>
             <id>jahia-thirdparty</id>
             <name>3rd Party Releases</name>
