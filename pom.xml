@@ -105,6 +105,16 @@
             <id>ossrh</id> <!-- Must match the serverId from the settings.xml -->
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
+        <repository>
+            <id>jahia-thirdparty</id>
+            <name>3rd Party Releases</name>
+            <url>https://devtools.jahia.com/nexus/content/repositories/thirdparty-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>jahia-thirdparty</id>
+            <name>3rd Party Snapshots</name>
+            <url>https://devtools.jahia.com/nexus/content/repositories/thirdparty-snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <properties>
@@ -333,8 +343,8 @@
                         </execution>
                     </executions>
                     <configuration>
-                        <serverId>ossrh</serverId> <!-- Must match the serverId from the settings.xml -->
-                        <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                        <serverId>jahia-thirdparty</serverId> <!-- Must match the serverId from the settings.xml -->
+                        <nexusUrl>https://devtools.jahia.com/nexus/</nexusUrl>
                         <autoReleaseAfterClose>true</autoReleaseAfterClose>
                     </configuration>
                 </plugin>
