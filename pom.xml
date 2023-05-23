@@ -33,7 +33,7 @@
 
     <groupId>org.owasp</groupId>
     <artifactId>csrfguard-parent</artifactId>
-    <version>4.1.4</version>
+    <version>4.1.4-jahia1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>OWASP CSRFGuard Parent POM</name>
@@ -85,10 +85,10 @@
     </modules>
 
     <scm>
-        <connection>scm:git:git://github.com/OWASP/www-project-csrfguard.git</connection>
-        <developerConnection>scm:git:git@github.com:OWASP/www-project-csrfguard.git</developerConnection>
-        <url>https://github.com/OWASP/www-project-csrfguard</url>
-        <tag>4.1.4</tag>
+        <connection>scm:git:git://github.com/Jahia/www-project-csrfguard.git</connection>
+        <developerConnection>scm:git:git@github.com:Jahia/www-project-csrfguard.git</developerConnection>
+        <url>https://github.com/Jahia/www-project-csrfguard</url>
+        <tag>4.1.4-jahia1</tag>
     </scm>
 
     <issueManagement>
@@ -97,14 +97,19 @@
     </issueManagement>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id> <!-- Must match the serverId from the settings.xml -->
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
+        <!-- use the following if you're not using a snapshot version. -->
         <repository>
-            <id>ossrh</id> <!-- Must match the serverId from the settings.xml -->
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>thirdparty-releases</id>
+            <name>Jahia Third Party Maven Repository</name>
+            <url>dav:https://devtools.jahia.com/nexus/content/repositories/thirdparty-releases/</url>
         </repository>
+        <!-- use the following if you ARE using a snapshot version. -->
+        <snapshotRepository>
+            <id>thirdparty-snapshots</id>
+            <name>Jahia Third Party Snapshot Maven Repository</name>
+            <url>dav:https://devtools.jahia.com/nexus/content/repositories/thirdparty-snapshots/</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
     </distributionManagement>
 
     <properties>
