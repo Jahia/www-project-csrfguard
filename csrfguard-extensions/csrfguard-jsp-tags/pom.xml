@@ -34,7 +34,7 @@
     <parent>
         <groupId>org.owasp</groupId>
         <artifactId>csrfguard-extensions</artifactId>
-        <version>4.1.4</version>
+        <version>4.1.4-jahia1-SNAPSHOT</version>
     </parent>
 
     <artifactId>csrfguard-jsp-tags</artifactId>
@@ -75,6 +75,6 @@
     </dependencies>
 
   <scm>
-    <tag>4.1.4</tag>
+    <tag>4.1.4-jahia1</tag>
   </scm>
 </project>
