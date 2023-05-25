@@ -101,13 +101,13 @@
         <repository>
             <id>thirdparty-releases</id>
             <name>Jahia Third Party Maven Repository</name>
-            <url>dav:https://devtools.jahia.com/nexus/content/repositories/thirdparty-releases/</url>
+            <url>https://devtools.jahia.com/nexus/content/repositories/thirdparty-releases/</url>
         </repository>
         <!-- use the following if you ARE using a snapshot version. -->
         <snapshotRepository>
             <id>thirdparty-snapshots</id>
             <name>Jahia Third Party Snapshot Maven Repository</name>
-            <url>dav:https://devtools.jahia.com/nexus/content/repositories/thirdparty-snapshots/</url>
+            <url>https://devtools.jahia.com/nexus/content/repositories/thirdparty-snapshots/</url>
             <uniqueVersion>false</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
