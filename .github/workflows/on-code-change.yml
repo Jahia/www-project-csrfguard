@@ -1,0 +1,31 @@
+name: On Code Change
+
+on:
+  pull_request:
+    types: [ opened, reopened, synchronize ]
+
+  push:
+    branches:
+      - '*jahia*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set environment variables from parameters
+        shell: bash
+        run: |
+          echo "NEXUS_USERNAME=${{ secrets.NEXUS_USERNAME }}" >> $GITHUB_ENV
+          echo "NEXUS_PASSWORD=${{ secrets.NEXUS_PASSWORD }}" >> $GITHUB_ENV
+      - name: Build and deploy to Nexus
+        shell: bash
+        if: ${{ github.event_name == 'push' }}
+        run: |
+          mvn -U -ntp -s .github/workflows/maven.settings.xml clean verify deploy
+      # Series of steps only executed when in a PR
+      - name: Build locally only
+        shell: bash
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          mvn -U -ntp -s .github/workflows/maven.settings.xml clean install
