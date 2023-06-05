@@ -88,7 +88,7 @@
         <connection>scm:git:git://github.com/Jahia/www-project-csrfguard.git</connection>
         <developerConnection>scm:git:git@github.com:Jahia/www-project-csrfguard.git</developerConnection>
         <url>https://github.com/Jahia/www-project-csrfguard</url>
-        <tag>4.1.4-jahia1</tag>
+        <tag>4.1.4-jahia-fixes</tag>
     </scm>
 
     <issueManagement>
